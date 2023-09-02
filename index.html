@@ -4,6 +4,8 @@
         <title> Sign up form </title>
         <link rel="stylesheet" href="style.css">
         <meta charset="utf-8">
+        <script src = "script.js" defer>
+        </script>
     </head>
     <body>
         <div class="logo-section">
@@ -31,7 +33,7 @@
                     <ul>
                         <li>
                             <label for="first-name">First name</label>
-                            <input type="text" id = "first-name" name = "first-name" required>
+                            <input type="text" id = "first-name" name = "first-name">
                         </li>
                         <li>
                             <label for="last-name">Last name</label>
@@ -43,15 +45,16 @@
                         </li>
                         <li>
                             <label for="phone-number">Phone number</label>
-                            <input type="tel" id = "phone-number" name = "phone-number">
+                            <input type="tel" id = "phone-number" name = "phone-number" pattern="[0-9]+">
                         </li>
                         <li>
                             <label for="password">Password</label>
-                            <input type="password" id="password" name="password">
+                            <input type="password" id="password" name="password" minlength="8" pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                         </li>
                         <li>
                             <label for="confirm-password">Confirm password</label>
                             <input type="password" name="confirm-password" id="confirm-password">
+                            <p id = "error-message">*Passwords do not match</p>
                         </li>
                     </ul>
                     <div class = "create-section">
